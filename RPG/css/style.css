@@ -1,0 +1,49 @@
+#goblin 
+{
+margin-left:610px;
+margin-top:-655px;
+position:relative;
+}
+
+
+
+#player
+{
+margin-top:-765px;
+margin-left:-430px;
+height:48px;
+width:31px;
+  position:relative;
+}
+
+#player2
+{
+margin-top:-643px;
+margin-left:-430px;
+height:48px;
+width:31px;
+position:relative;
+}
+
+#hit
+{
+  position:relative;
+  margin-top:-990px;
+  margin-left:295px;
+}
+
+#bg
+{
+	margin-left: -130px;
+  position:relative;
+}
+#loading
+{
+	margin-top:20px;
+}
+
+body
+{
+//	background-image:
+	background-repeat:no-repeat;
+}
