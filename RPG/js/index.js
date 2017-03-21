@@ -14,7 +14,7 @@
 
   function rando()
    {
-      danger = Math.floor((Math.random() * 10) + 1);     
+      var danger = Math.floor((Math.random() * 10) + 1);     
    }
          
    
