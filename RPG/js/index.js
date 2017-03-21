@@ -1,7 +1,5 @@
   var eHealth = 100;
   var pHealth = 100;
-  var pAttack = false;
-  var enAttack = false;
   
   function exitStage()
   {
@@ -237,15 +235,13 @@
     {
 	  eAttack();
     }, 21000);
-	
-	  
   }
   
   
   exitStage();
-  //enterWorld();
+  enterWorld();
   //enterDesert();
-  enterForest();
+  //enterForest();
   
 
   
@@ -295,10 +291,7 @@
   
   function eAttack()
   {
-	  enAttack = true;
-	  if((pHealth > 0) && (enAttack === true))
-	  {
-	  document.getElementById("hit").style.marginLeft="225px"
+	  document.getElementById("hit").style.marginLeft="-65px"
 	  setTimeout(function() {
       $("#goblin").animate({
         left: '-325px'
@@ -311,6 +304,7 @@
       }, 1300);
 	   setTimeout(function() {
       document.getElementById("hit").style.display="none"
+	  document.getElementById("hit").style.marginLeft="275px"
       }, 2300);
 	  
 	  setTimeout(function() {
@@ -323,28 +317,19 @@
 	  pHealth -= 25;
 	  console.log("Player Health:",pHealth);
       }, 2300);
+	
 	  }, 6000);
-	  }
-	  document.getElementById("hit").style.marginLeft="-65px";
-	  enAttack = false;
+	  
+	  
   }
   
   $("#goblin").click(function() {
-	if(enAttack === false)
-	{
-	document.getElementById("hit").style.marginLeft="-65px"
-	pAttack = true;
-	console.log("Player attack:",pAttack)
     setTimeout(function() {
       $("#player").animate({
         left: '325px'
       }, 1300);
       walk();
 	  goblinHit();
-	  document.getElementById("hit").style.marginLeft="225px";
-      setTimeout(function() {
-      pAttack = false;
-      }, 2300);
     });
 	
 	function goblinHit()
@@ -359,7 +344,7 @@
         left: '5px'
       });
     },2350);
-	}
+
 	
 	
 	
@@ -376,7 +361,7 @@
       });
 	  document.getElementById("hit").style.display="none";
     }, 1800);
-  
+
   });
   
   function playerHit()
@@ -393,4 +378,4 @@
     },1350);
 
   }
-  
+ 
