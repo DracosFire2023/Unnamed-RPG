@@ -1,6 +1,9 @@
 var eHealth = 100;
 var pHealth = 100;
 var danger = 0;
+var upCount = 1;
+var keysOn;
+  
   
 function exitStage() {
   document.getElementById("hit").style.display="none";
@@ -12,7 +15,6 @@ function rando() {
 }
          
 function enterWorld() {   
-  upCount = 1;
   
 	document.getElementById("hit").style.display = "none";
 	document.getElementById("player").style.display = "none";
