@@ -1,3 +1,5 @@
+$(document).ready(function() {
+	
 var eHealth = 100;
 var pHealth = 100;
 var danger = 0;
@@ -201,22 +203,9 @@ function enterForest() {
 }
   
 exitStage();
-	enterWorld();
-  	//enterDesert();
-  	//enterForest();
-
-  	/* Code snippets
-		document.getElementById("hit").style.display="none";
-		document.getElementById('brick').style.backgroundImage="url(https://lh4.googleusercontent.com/i81MmZvfrpE9eLcziPWKbcb_Aq15_PCbSfFatbM54X771G_MDOs47B-VWo1siimubrq4RquxthP2S9I=w1366-h589)"
-
-		setTimeout(function() {
-			statements
-		}, 2000);
-
-		$( "block" ).animate({ "left": "-=50px" }, "slow" );
-		});
-	*/
-
+enterWorld();
+//enterDesert();
+//enterForest();
 
 function step() {
 	setTimeout(function() {
@@ -323,4 +312,5 @@ function playerHit() {
       		left: '5px'
     	});
   	},1350);
-}
+    }
+});
