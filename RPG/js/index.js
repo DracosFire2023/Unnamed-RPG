@@ -6,16 +6,22 @@ var danger = 0;
 var upCount = 1;
 var keysOn;
   
-  
-function exitStage() {
+//this function hides the splash bubble and makes the background black.  
+function setStage() {
   document.getElementById("hit").style.display="none";
   document.getElementsByTagName("body")[0].style.backgroundColor="black";
 }
  
+//this is for triggering random fights
 function rando() {
   danger = Math.floor((Math.random() * 10) + 1);     
 }
          
+/*Movement is only enabled during this stage. 
+  This is the world in which the player walks around to collect items and encounter enemies. 
+  Movement during the fight scene is disabled because fighting is comprised of clicking on the enemy.
+  Will add different attack types and stats later, based on pick ups and scoring, level ups etc 
+  Will add some sort of sound to signify the start of a fight.  */
 function enterWorld() {     
     document.getElementById("hit").style.display = "none";
     document.getElementById("player").style.display = "none";
@@ -131,7 +137,7 @@ function enterWorld() {
 }
 
 setTimeout(function() {
-	$("#desertFight").fadeIn( "slow", function() { });
+	$("#fightScene").fadeIn( "slow", function() { });
   	$("#bg").fadeIn("slow", function() { });
   	document.getElementById("loading").style.display="none";
 }, 4000);
@@ -176,7 +182,7 @@ function enterForest() {
 	document.getElementById("loading").style.display="inline";
 
   	setTimeout(function() {
-    	$("#desertFight").fadeIn("slow", function() { });
+    	$("#fightScene").fadeIn("slow", function() { });
     	$("#bg").fadeIn("slow", function() { });
 
 	  	document.getElementById("goblin").style.display = "inline";
@@ -202,7 +208,7 @@ function enterForest() {
   	}, 21000);
 }
   
-exitStage();
+setStage();
 enterWorld();
 //enterDesert();
 //enterForest();
