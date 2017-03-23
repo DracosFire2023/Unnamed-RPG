@@ -34,8 +34,8 @@ function enterWorld() {
 	document.getElementById("loading").style.display="inline";
 	
 	setTimeout(function() {
-    	$( "#desertFight" ).fadeIn( "slow", function() { });
-    	$("#bg").fadeIn( "slow", function() { });
+    	$("#fightScene").fadeIn( "slow", function() {});
+    	$("#bg").fadeIn("slow", function() {});
     	document.getElementById("loading").style.display="none";
     	document.getElementById("player2").style.display = "inline";
   	}, 4000);
@@ -137,8 +137,8 @@ function enterWorld() {
 }
 
 setTimeout(function() {
-	$("#fightScene").fadeIn( "slow", function() { });
-  	$("#bg").fadeIn("slow", function() { });
+	$("#fightScene").fadeIn( "slow", function() {});
+  	$("#bg").fadeIn("slow", function() {});
   	document.getElementById("loading").style.display="none";
 }, 4000);
   
@@ -151,8 +151,8 @@ function enterDesert() {
 	setTimeout(function() {
     	document.getElementById("loading").style.display="none";
 
-    	$("#desertFight").fadeIn("slow", function() { });
-	  	$("#bg").fadeIn("slow", function() { });
+    	$("#fightScene").fadeIn("slow", function() {});
+	  	$("#bg").fadeIn("slow", function() {});
 
     	document.getElementById("loading").style.display="none";
 	  	document.getElementById("player").style.display="inline";
