@@ -3,7 +3,7 @@ $(document).ready(function() {
 var eHealth = 100;
 var pHealth = 100;
 var danger = 0;
-var upCount = 1;
+var upCount = 1;  //this variable is to keep the player from walking into the sky. w increments, s decrements
 var keysOn;
   
 //this function hides the splash bubble and makes the background black.  
@@ -40,7 +40,7 @@ function enterWorld() {
     	document.getElementById("player2").style.display = "inline";
   	}, 4000);
 	
-	keysOn = true;
+	keysOn = true;  //enables movement system with a,w,s,d keys
 	
 	document.addEventListener('keydown', function(event) {
     	if(event.keyCode == 65) {            
