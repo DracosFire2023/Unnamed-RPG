@@ -43,7 +43,8 @@ function enterWorld() {
 	keysOn = true;  //enables movement system with a,w,s,d keys
 	
 	document.addEventListener('keydown', function(event) {
-    	if(event.keyCode == 65) {            
+    	if(event.keyCode == 65) {  
+		worldWalk();
       		rando();
       		console.log('A was pressed');
 
@@ -65,7 +66,8 @@ function enterWorld() {
     	}
 		
     	else if(event.keyCode == 87) {
-			rando();
+		worldWalk();
+		rando();
       		console.log('W was pressed');
 
       		if(keysOn === true) {
@@ -88,8 +90,9 @@ function enterWorld() {
     	}
 
     	else if(event.keyCode == 68) {
+		worldWalk();
       		rando();
-		  	console.log("D was pressed");
+		console.log("D was pressed");
 
       		if(keysOn === true) {
         		$("#player2").animate({
@@ -110,7 +113,8 @@ function enterWorld() {
 		}
 
     	else if(event.keyCode == 83) {
-			rando();
+		worldWalk();
+		rando();
       		console.log('S was pressed');
 
       		if(keysOn === true) {
@@ -230,6 +234,26 @@ function walk() {
 
   	setTimeout(function() {
     	step();
+  	}, 800);
+}
+	
+function worldStep() {     // this is for the second player image div in enterWorld()
+  	setTimeout(function() {
+    	document.getElementById('player2').src = ("img/walk.png")
+  	}, 0);
+
+  	setTimeout(function() {
+	    document.getElementById('player2').src = ("img/stand.png")
+  	}, 500);
+}
+
+function worldWalk() { 
+	setTimeout(function() {
+    	worldStep();
+  	}, 0);
+
+  	setTimeout(function() {
+    	worldStep();
   	}, 800);
 }
   
