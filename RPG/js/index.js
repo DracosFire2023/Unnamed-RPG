@@ -274,11 +274,6 @@ function eAttack() {
 		}, 1300);
 
 		setTimeout(function() {
-			document.getElementById("hit").style.display="none"
-			document.getElementById("hit").style.marginLeft="275px"
-		}, 2300);
-
-		setTimeout(function() {
 			$("#goblin").animate({
 				left: '25px'
 			}, 1300);
@@ -294,6 +289,7 @@ function eAttack() {
 }
   
 $("#goblin").click(function() {
+    document.getElementById("hit").style.marginLeft="275px"
 	setTimeout(function() {
     $("#player").animate({
     	left: '325px'
