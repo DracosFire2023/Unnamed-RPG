@@ -270,21 +270,19 @@ function eAttack() {
 		}, 1300);
 
 		setTimeout(function() {
-			playerHit();
-		}, 1300);
+			document.getElementById("hit").style.display="none"
+		}, 2300);
+
 
 		setTimeout(function() {
-			document.getElementById("hit").style.display="none"
-			document.getElementById("hit").style.marginLeft="275px"
-		}, 2300);
+			playerHit();
+		}, 1300);
 
 		setTimeout(function() {
 			$("#goblin").animate({
 				left: '25px'
 			}, 1300);
 		}, 1800); 
-
-		document.getElementById("hit").style.display="none"
 
 		setTimeout(function() {
 			pHealth -= 25;
@@ -294,6 +292,7 @@ function eAttack() {
 }
   
 $("#goblin").click(function() {
+    document.getElementById("hit").style.marginLeft="275px"
 	setTimeout(function() {
     $("#player").animate({
     	left: '325px'
