@@ -1,10 +1,51 @@
 $(document).ready(function() {
 	
 var eHealth = 100;
-var pHealth = 100;
+var pHealth = 300;
 var danger = 0;
 var upCount = 1;  //this variable is to keep the player from walking into the sky. w increments, s decrements
 var keysOn;
+	
+function pDamage() {
+  pHealth -= 25;
+  console.log("Player Health:",pHealth);
+  if(pHealth === 275) {
+    document.getElementById("pHealth").src = "img/energy/n25.png";  	 
+  }
+  else if(pHealth === 250) {
+	document.getElementById("pHealth").src = "img/energy/n50.png";  
+  }	
+  else if(pHealth === 225) {
+	document.getElementById("pHealth").src = "img/energy/n75.png";  
+  }	
+  else if(pHealth === 200) {
+	document.getElementById("pHealth").src = "img/energy/n100.png";  
+  }	
+  else if(pHealth === 175) {
+	document.getElementById("pHealth").src = "img/energy/n125.png";  
+  }	
+  else if(pHealth === 150) {
+	document.getElementById("pHealth").src = "img/energy/n150.png";  
+  }	
+  else if(pHealth === 125) {
+	document.getElementById("pHealth").src = "img/energy/n175.png";  
+  }	
+  else if(pHealth === 100) {
+	document.getElementById("pHealth").src = "img/energy/n200.png";  
+  }	
+  else if(pHealth === 75) {
+	document.getElementById("pHealth").src = "img/energy/n225.png";  
+  }	
+  else if(pHealth === 50) {
+	document.getElementById("pHealth").src = "img/energy/n250.png";  
+  }	
+  else if(pHealth === 25) {
+	document.getElementById("pHealth").src = "img/energy/n300.png";  
+  }	
+  else if(pHealth === 0) {
+	document.getElementById("pHealth").src = "img/energy/n375.png";  
+  }	
+}
   
 //this function hides the splash bubble and makes the background black.  
 function setStage() {
@@ -175,7 +216,11 @@ function enterForest() {
 
 	console.log("keysOn is",keysOn);
 	console.log("Player Health:",pHealth);
-
+        document.getElementById("pHealth").style.display = "inline";  
+	document.getElementById("pHealth").style.marginTop = "-825px"; 
+	document.getElementById("pHealth").style.position = "absolute"; 	
+	document.getElementById("pHealth").style.maxWidth = "30%";
+	document.getElementById("pHealth").style.maxHeight = "30%";
   	document.getElementById("player").style.display = "none";
 	document.getElementById("player2").style.display = "none";
 	document.getElementById("hit").style.marginBottom = "-225px";
@@ -210,6 +255,34 @@ function enterForest() {
 	setTimeout(function() {
 		eAttack();
   	}, 21000);
+	
+    setTimeout(function() {
+		eAttack();
+  	}, 28000);
+	
+	setTimeout(function() {
+		eAttack();
+  	}, 35000);
+
+	setTimeout(function() {
+		eAttack();
+  	}, 41000);
+	
+	setTimeout(function() {
+		eAttack();
+  	}, 47000);
+	
+	setTimeout(function() {
+		eAttack();
+  	}, 54000);
+	
+	setTimeout(function() {
+		eAttack();
+  	}, 61000);
+	
+	setTimeout(function() {
+		eAttack();
+  	}, 68000);
 }
   
 setStage();
@@ -266,7 +339,11 @@ function eAttack() {
     	}, 1300);
 
 		setTimeout(function() {
-			document.getElementById("hit").style.display="inline"
+			document.getElementById("hit").style.display="inline"  
+		}, 1300);
+		
+		setTimeout(function() {
+			pDamage();
 		}, 1300);
 
 		setTimeout(function() {
